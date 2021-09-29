@@ -1,0 +1,34 @@
+class Mahasiswa:
+    '''Dasar kelas Mahasiswa'''
+    jumlah_mahasiswa = 0
+
+    def _init_(self, nama, nim, program_studi, alamat, tgl_lahir):
+        self.nama = nama
+        self.nim = nim
+        self.program_studi = program_studi
+        self.alamat = alamat
+        self.tgl_lahir = tgl_lahir
+        Mahasiswa.jumlah_mahasiswa += 1
+
+    def jumlah(self):
+        print("Total Mahasiswa: ", Mahasiswa.jumlah_mahasiswa)
+
+    def tampilkan_mahasiswa(self):
+        print("Nama          : ", self.nama)
+        print("NIM           : ", self.nim)
+        print("Program Studi : ", self.program_studi) 
+        print("Alamat        : ", self.alamat)
+        print("Tanggal Lahir : ", self.tgl_lahir)
+
+mahasiswa1 = Mahasiswa("Ajeng", "M0119001", "Matematika", "Solo", "24 Januari 2000")
+mahasiswa2 = Mahasiswa("Melinda", "M0119058", "Matematika", "Kudus", "12 Mei 2001")
+mahasiswa3 = Mahasiswa("Bila", "M0119059", "Matematika", "Purwakarta", "05 Oktober 2001")
+mahasiswa4 = Mahasiswa("Sasa", "M0119002", "Matematika", "Solo", "18 September 2001")
+mahasiswa5 = Mahasiswa("Elisa", "M0119021", "Matematika", "Ponorogo", "16 Juli 2001")
+
+mahasiswa1.tampilkan_mahasiswa()
+mahasiswa2.tampilkan_mahasiswa()
+mahasiswa3.tampilkan_mahasiswa()
+mahasiswa4.tampilkan_mahasiswa()
+mahasiswa5.tampilkan_mahasiswa()
+print("Total Mahasiswa: ", Mahasiswa.jumlah_mahasiswa)
